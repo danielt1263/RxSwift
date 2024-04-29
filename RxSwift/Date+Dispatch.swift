@@ -10,6 +10,17 @@ import Dispatch
 import Foundation
 
 extension DispatchTimeInterval {
+	var asTimeInterval: TimeInterval {
+		switch self {
+		case let .nanoseconds(val): return Double(val) / 1_000_000_000.0
+		case let .microseconds(val): return Double(val) / 1_000_000.0
+		case let .milliseconds(val): return Double(val) / 1000.0
+		case let .seconds(val): return Double(val)
+		case .never: return Double.infinity
+		default: fatalError()
+		}
+	}
+
     var convertToSecondsFactor: Double {
         switch self {
         case .nanoseconds: return 1_000_000_000.0
