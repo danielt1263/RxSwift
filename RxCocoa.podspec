@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "RxCocoa"
-  s.version          = "6.7.0"
+  s.version          = "6.8.0"
   s.summary          = "RxSwift Cocoa extensions"
   s.description      = <<-DESC
 * UI extensions
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
                         DESC
   s.homepage         = "https://github.com/ReactiveX/RxSwift"
   s.license          = 'MIT'
-  s.author           = { "Krunoslav Zaher" => "krunoslav.zaher@gmail.com" }
+  s.author           = { "Shai Mishali" => "freak4pc@gmail.com", "Krunoslav Zaher" => "krunoslav.zaher@gmail.com" }
   s.source           = { :git => "https://github.com/ReactiveX/RxSwift.git", :tag => s.version.to_s }
 
   s.requires_arc          = true
@@ -18,13 +18,18 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.10'
   s.watchos.deployment_target = '3.0'
   s.tvos.deployment_target = '9.0'
+  s.visionos.deployment_target = "1.0" if s.respond_to?(:visionos)
 
   s.header_dir            = "RxCocoa"
   s.source_files          = 'RxCocoa/**/*.{swift,h,m}', 'Platform/**/*.swift'
   s.exclude_files         = 'RxCocoa/Platform/**/*.swift', 'Platform/AtomicInt.swift'
 
-  s.dependency 'RxSwift', '6.7.0'
-  s.dependency 'RxRelay', '6.7.0'
+  s.dependency 'RxSwift', '6.8.0'
+  s.dependency 'RxRelay', '6.8.0'
+
+  s.resource_bundles = {
+    'RxCocoa_Privacy' => ['Sources/RxCocoa/PrivacyInfo.xcprivacy'],
+  }
 
   s.swift_version = '5.1'
 

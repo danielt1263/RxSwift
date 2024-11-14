@@ -30,7 +30,7 @@ Note that the `Observable` must complete, or the async task will suspend and nev
 
 #### Awaiting a non-throwing sequence
 
-`Infalliable`, `Driver`, and `Signal` are all guaranteed to never emit errors (as opposed to `Observable`), so you may directly iterate over their values without worrying about catching any errors:
+`Infallible`, `Driver`, and `Signal` are all guaranteed to never emit errors (as opposed to `Observable`), so you may directly iterate over their values without worrying about catching any errors:
 
 ```swift
 for await value in infallible.values {
@@ -62,4 +62,18 @@ stream.asObservable()
         onNext: { ... },
         onError: { ... }
     )
+```
+
+### Wrapping an `async` result as a `Single`
+
+If you already have an async piece of work that returns a single result you wish to await, you can bridge it back to the Rx wordl by using `Single.create`, a special overload which takes an `async throws` closure where you can simply await your async work:
+
+```swift
+func doIncredibleWork() async throws -> AmazingRespones {
+    ...
+}
+
+let single = Single.create {
+    try await doIncredibleWork()
+} // Single<AmazingResponse>
 ```

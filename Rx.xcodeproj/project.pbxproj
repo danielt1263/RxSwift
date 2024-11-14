@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -1075,7 +1075,7 @@
 		C8093CBF1B8A72BE0088E94D /* PublishSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PublishSubject.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C8093CC01B8A72BE0088E94D /* ReplaySubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ReplaySubject.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C8093CC11B8A72BE0088E94D /* SubjectType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectType.swift; sourceTree = "<group>"; };
-		C8093E8B1B8A732E0088E94D /* DelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DelegateProxy.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		C8093E8B1B8A732E0088E94D /* DelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DelegateProxy.swift; sourceTree = "<group>"; };
 		C8093E8C1B8A732E0088E94D /* DelegateProxyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateProxyType.swift; sourceTree = "<group>"; };
 		C8093E9C1B8A732E0088E94D /* RxTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTarget.swift; sourceTree = "<group>"; };
 		C8093E9D1B8A732E0088E94D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -2770,7 +2770,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 1250;
-				ORGANIZATIONNAME = "Krunoslav Zaher";
+				ORGANIZATIONNAME = RxSwift;
 				TargetAttributes = {
 					C80938F51B8A71760088E94D = {
 						LastSwiftMigration = 0800;
@@ -3942,6 +3942,13 @@
 		};
 		C88FA4FE1C25C44800CCFEA4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilters = (
+				ios,
+				maccatalyst,
+				macos,
+				tvos,
+				xros,
+			);
 			target = C8A56AD61AD7424700B4673B /* RxSwift */;
 			targetProxy = C88FA4FF1C25C44800CCFEA4 /* PBXContainerItemProxy */;
 		};
@@ -3980,6 +3987,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.rx.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
 			};
 			name = Debug;
 		};
@@ -4000,6 +4010,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.rx.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
 			};
 			name = Release;
 		};
@@ -4020,6 +4033,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.rx.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
 			};
 			name = "Release-Tests";
 		};
@@ -4040,6 +4056,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.rx.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RxCocoa;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
 			};
 			name = Debug;
 		};
@@ -4060,6 +4079,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.rx.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RxCocoa;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
 			};
 			name = Release;
 		};
@@ -4080,6 +4102,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.rx.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RxCocoa;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
 			};
 			name = "Release-Tests";
 		};
@@ -4100,6 +4125,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.rx.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RxBlocking;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
 			};
 			name = Debug;
 		};
@@ -4120,6 +4148,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.rx.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RxBlocking;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
 			};
 			name = Release;
 		};
@@ -4140,6 +4171,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.rx.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RxBlocking;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
 			};
 			name = "Release-Tests";
 		};
@@ -4495,6 +4529,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.rx.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RxSwift;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
 			};
 			name = "Release-Tests";
 		};
@@ -4520,8 +4557,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.rx.RxTest;
 				PRODUCT_NAME = RxTest;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvos appletvsimulator";
-				TARGETED_DEVICE_FAMILY = "1,2,3";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
 			};
 			name = Debug;
 		};
@@ -4547,8 +4585,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.rx.RxTest;
 				PRODUCT_NAME = RxTest;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvos appletvsimulator";
-				TARGETED_DEVICE_FAMILY = "1,2,3";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
 			};
 			name = Release;
 		};
@@ -4574,8 +4613,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.rx.RxTest;
 				PRODUCT_NAME = RxTest;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvos appletvsimulator";
-				TARGETED_DEVICE_FAMILY = "1,2,3";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,7";
 			};
 			name = "Release-Tests";
 		};
@@ -4731,6 +4771,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.rx.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RxSwift;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
 			};
 			name = Debug;
 		};
@@ -4751,6 +4794,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.rx.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RxSwift;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4,7";
 			};
 			name = Release;
 		};
